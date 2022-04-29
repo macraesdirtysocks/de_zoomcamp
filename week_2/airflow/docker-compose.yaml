@@ -56,7 +56,7 @@ x-airflow-common:
     AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
     AIRFLOW__CORE__FERNET_KEY: ''
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
-    AIRFLOW__CORE__LOAD_EXAMPLES: 'flase'
+    AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     AIRFLOW__API__AUTH_BACKEND: 'airflow.api.auth.backend.basic_auth'
     _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
     GOOGLE_APPLICATION_CREDENTIALS: /.google/credentials/google_credentials.json
@@ -64,6 +64,12 @@ x-airflow-common:
 
     GCP_PROJECT_ID: 'literally-my-first-de-project'
     GCP_GCS_BUCKET: 'dtc_data_lake_literally-my-first-de-project'
+
+    PG_HOST: "${PG_HOST}"
+    PG_USER: "${PG_USER}"
+    PG_PASSWORD: "${PG_PASSWORD}"
+    PG_PORT: "${PG_PORT}"
+    PG_DATABASE: "${PG_DATABASE}"
 
   volumes:
     - ./dags:/opt/airflow/dags

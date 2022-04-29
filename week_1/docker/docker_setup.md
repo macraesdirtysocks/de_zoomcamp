@@ -1,3 +1,12 @@
+# Docker setup
+These are some notes from my wading through the docker/sql portion of week 1.
+
+The first thing that really tripped me up was not having docker running on my computer.  You probably installed it already but I didn't quite catch that you need to have it running on your local machine.
+
+TLDR - make sure you have the docker icon in your menu bar.
+
+The general progression in docker is Dockerfile > Image > Container.
+
 - [Docker setup](#docker-setup)
   - [Make a Dockerfile](#make-a-dockerfile)
   - [Create pipeline.py](#create-pipelinepy)
@@ -7,14 +16,7 @@
   - [pgAdmin and docker](#pgadmin-and-docker)
   - [Docker Compose](#docker-compose)
 
-# Docker setup
-These are some notes from my wading through the docker/sql portion of week 1.
 
-The first thing that really tripped me up was not having docker running on my computer.  You probably installed it already but I didn't quite catch that you need to have it running on your local machine.
-
-TLDR - make sure you have the docker icon in your menu bar.
-
-The general progression in docker is Dockerfile > Image > Container.
 
 ## Make a Dockerfile
 
@@ -117,11 +119,11 @@ Connecting to the database:
 
 ```python
 # pgcli
-psql -h localhost -p 5432 -u root -d ny_taxi
+pgcli -h localhost -p 5432 -U root -d ny_taxi
 ```
 
 ```python
-# postgres - note the uppercase U
+# postgres
 psql -h localhost -p 5432 -U root -d ny_taxi
 ```
 
@@ -199,7 +201,7 @@ with open('yellow_tripdata_2021-01.csv', 'r') as f:
 conn.commit()
 ```
 
-Now if we go back to our terminal and connect to our databasse using one of the connections outline in section 4 we can execture an SQL statement and see we have.
+Now if we go back to our terminal and connect to our database using one of the connections outline in section 4 we can execture an SQL statement and see we have.
 
 ```SQL
 SELECT COUNT(1) FROM yellow_taxi_data;

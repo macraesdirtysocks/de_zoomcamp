@@ -25,7 +25,7 @@ PG_DATABASE = os.getenv('PG_DATABASE')
 local_workflow = DAG(
     dag_id="local_ingestion_dag",
     schedule_interval="0 6 2 * *",
-    start_date=datetime(2021, 1, 1,)
+    start_date=datetime(2021, 1, 1)
 
 )
 
@@ -33,7 +33,7 @@ with local_workflow:
 
     wget_task = BashOperator(
         task_id='download_data',
-        bash_command=f'curl -sS {URL} > {OUTPUT_FILE_PATH}/{TABLE_NAME}'
+        bash_command=f'curl -sS {URL} > {OUTPUT_FILE_PATH}'
     )
 
     ingestion_task = PythonOperator(

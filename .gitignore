@@ -1,5 +1,4 @@
 "/large_files/"
-<<<<<<< Updated upstream
 .DS_Store
 .idea
 *.tfstate
@@ -17,7 +16,5 @@ serving_dir
 .ipynb_checkpoints/
 !week_6_stream_processing/avro_example/data/rides.csv
 ny_taxi_postgres_data/
-=======
 ny_taxi_postres_data
->>>>>>> Stashed changes
 week_1/terraform/.terraform/providers/registry.terraform.io/hashicorp/google/4.18.0/darwin_amd64/terraform-provider-google_v4.18.0_x5

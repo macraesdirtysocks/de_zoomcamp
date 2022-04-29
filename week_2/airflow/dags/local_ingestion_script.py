@@ -21,7 +21,7 @@ def data_ingest_to_db(user, password, host, port, db, table_name, csv_name, exec
 
     df.head(n=0).to_sql(name=table_name, con=engine, if_exists='replace', index=False)
 
-    conn = pg.connect(f"host={host} dbname={db} user={user} password={password}")
+    conn = pg.connect(f'host={host} dbname={db} user={user} password={password}')
     cur = conn.cursor()
     with open(csv_name, 'r') as f:
         next(f) # Skip the header row.

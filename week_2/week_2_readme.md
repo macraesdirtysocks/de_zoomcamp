@@ -60,6 +60,7 @@ I followed these steps:
     ```bash
         put google_credentials.json
     ```
+    
 ## 1.2. Airflow Setup
 
 I followed along this part faily verbatim.
@@ -92,6 +93,7 @@ Doing this before you first build your image will save you some time.
 
 My requirements.txt looks like this.
 ```python
+
 apache-airflow-providers-google
 pyarrow
 sqlalchemy

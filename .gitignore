@@ -18,3 +18,6 @@ serving_dir
 ny_taxi_postgres_data/
 ny_taxi_postres_data
 week_1/terraform/.terraform/providers/registry.terraform.io/hashicorp/google/4.18.0/darwin_amd64/terraform-provider-google_v4.18.0_x5
+target/
+logs/
+dbt_packages/

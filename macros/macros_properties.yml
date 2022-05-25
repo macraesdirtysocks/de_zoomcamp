@@ -11,7 +11,8 @@ macros:
           payment_type value.
           Must be one of the accepted values, otherwise the macro will return null
   - name: update_service_zone_w_airport_code
-    description: This macro receives zone argument and updates the service_zone column with airport codes for NYC area airports.
+    description: >
+      This macro receives zone argument and updates the service_zone column with airport codes for NYC area airports.
     arguments:
       - name: zone
         type: string

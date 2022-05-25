@@ -2,24 +2,17 @@ version: 2
 
 macros:
   - name: get_payment_type_description
-    description: >
-      This macro receives a payment_type and returns the corresponding description.
+    description: This macro receives a payment_type and returns the corresponding description.
     arguments:
       - name: payment_type
         type: int
-        description: >
-          payment_type value.
-          Must be one of the accepted values, otherwise the macro will return null
+        description: Payment_type value. Must be one of the accepted values, otherwise the macro will return null.
   - name: update_service_zone_w_airport_code
-    description: >
-      This macro receives zone argument and updates the service_zone column with airport codes for NYC area airports.
+    description: This macro receives zone argument and updates the service_zone column with airport codes for NYC area airports.
     arguments:
       - name: zone
         type: string
-        description: >
-          zone value
+        description: zone value
       - name: else_col
-        type: sting
-        description: >
-          Value for else argumnent in case statement.  This will update all values not in New York Airport names.
-          
+        type: string
+        description: Value for else argumnent in case statement.  This will update all values not in New York Airport names.

@@ -17,10 +17,9 @@ macros:
       - name: zone
         type: string
         description: > 
-          zone value.
+          zone value
       - name: else_col
         type: sting
         description: > 
-          value for else argumnent in case statement.
-          this will update all values not in New York Airport names.
+          Value for else argumnent in case statement.  This will update all values not in New York Airport names.
           

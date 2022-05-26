@@ -6,6 +6,8 @@ To be clear I cloned my own repo to my VM and I'm running exclusivly from my VM 
 
 I decided to clone my own repo and do as much of my own work as possible instead of basically copying the instructors and just changing a couple variables.  This lead to a many problems but solving them is where you learn wtf is going going on.
 
+If you're wondering what I have going on in the week 2 dags with the schema updating please see my week 3 notes.
+
 - [1. Introduction](#1-introduction)
   - [1.1. Setup google credentials](#11-setup-google-credentials)
   - [1.2. Airflow Setup](#12-airflow-setup)
@@ -163,3 +165,5 @@ I have a couple issues I haven't figured out yet:
 1. Dags seem to insist on trying to do a run for the current date even though I used a start_date and end_date.
 
 2. I feel like when I have a start and end schedueled and catchup=True I should be able to see all the dags in the airfloww tree schedueled and ready to go.  However they just seem to genereate as they go.  Seems off.
+
+If you're trying to figure out what I have going on in week 2 please see the end of my week 3 notes.

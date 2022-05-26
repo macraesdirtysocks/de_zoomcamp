@@ -15,11 +15,9 @@ INPUT_FILETYPE = "parquet"
 INPUT_FILENAME = "yellow_tripdata"
 OUTPUT_FOLDER = "yellow"
 DS_COLUMN = "tpep_pickup_datetime"
-
 path_to_local_home = os.environ.get("AIRFLOW_HOME", "/opt/airflow/")
-
 BIGQUERY_DATASET = os.environ.get("BIGQUERY_DATASET", 'trips_data_all')
-
+# EXTERNAL_TABLE_SCHEMA = 'yellow_tripdata_schema.json'
 
 default_args = {
     "owner": "airflow",
@@ -47,19 +45,12 @@ with DAG(
         )
 
     bq_yellow_tripdata_external_table_task = BigQueryCreateExternalTableOperator(
-        task_id="bq_yellow_tripdata_external_table_task",
-        table_resource={
-            "tableReference": {
-                "projectId": PROJECT_ID,
-                "datasetId": BIGQUERY_DATASET,
-                "tableId": f"{INPUT_FILENAME}_external_table",
-            },
-            "externalDataConfiguration": {
-                "autodetect": "True",
-                "sourceFormat": f"{INPUT_FILETYPE.upper()}",
-                "sourceUris": [f"gs://{BUCKET}/{OUTPUT_FOLDER}/*"],
-            },
-        },
+        task_id="bq_green_tripdata_external_table_task",
+        destination_project_dataset_table=f"{PROJECT_ID}.{BIGQUERY_DATASET}.{INPUT_FILENAME}_external_table",
+        bucket=BUCKET,
+        source_objects=[f"{OUTPUT_FOLDER}/*"],
+        # schema_object=EXTERNAL_TABLE_SCHEMA,
+        source_format=INPUT_FILETYPE
     )
 
     CREATE_BQ_TBL_QUERY = (

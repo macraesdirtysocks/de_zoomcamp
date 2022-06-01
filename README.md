@@ -7,3 +7,11 @@ My work may not line up perfectly with the course because I'm trying to do as mu
 This repo will contain a folder for each week and each folder will have at least one readme with notes for the week.  The aim was not just copy the course repo but note things that casued me grief and how I proceeded.
 
 I will update this as I go.
+
+### Week 4
+
+- Highly recommend going to dbt and signing up for their free [course account](https://courses.getdbt.com/collections).  It will make week 4 go real smooth for you.
+- I would do at least the first two:
+  - dbt fundamentals
+  - Jinja, macros and packages
+- Get a sweet badge to show everyone you're now a dbt jinja ninja.

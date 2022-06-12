@@ -8,6 +8,10 @@ This repo will contain a folder for each week and each folder will have at least
 
 I will update this as I go.
 
+I'm through the pipeline porion of the course and I'm gonna jump to some other stuff that has taken priority.
+
+Feel free to email me if you need any help with the first 5 weeks of this project.
+
 ### Week 4
 
 - Highly recommend going to dbt and signing up for their free [course account](https://courses.getdbt.com/collections).  It will make week 4 go real smooth for you.
